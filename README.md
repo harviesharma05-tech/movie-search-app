@@ -1,28 +1,28 @@
 # Movie Search App 🎬
 
-A movie search application built using HTML, CSS, JavaScript, and OMDb API.
+A movie/show search application built using HTML, CSS, JavaScript and TVMaze API.
 
 ## Features
 
-- Search any movie
-- Movie poster display
-- Genre information
-- IMDB rating
-- Plot summary
-- Responsive design
+- Search TV shows and movies
+- Display poster
+- Show rating
+- Show genres
+- Display summary
+- No API key required
 
 ## Technologies Used
 
 - HTML
 - CSS
 - JavaScript
-- OMDb API
+- TVMaze API
 
 ## How to Run
 
-1. Get an OMDb API key.
-2. Replace YOUR_API_KEY in script.js.
-3. Open index.html.
+1. Download project
+2. Open index.html
+3. Search any movie/show
 
 ## Author
 
