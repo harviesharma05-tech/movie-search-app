@@ -1,29 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Search App</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="container">
+    <div class="container">
 
-    <h1>🎬 Movie Search App</h1>
+        <h1>🎬 Movie Search App</h1>
 
-    <input
-        type="text"
-        id="searchInput"
-        placeholder="Enter movie/show name">
+        <div class="search-box">
 
-    <button onclick="searchMovie()">
-        Search
-    </button>
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Enter Movie or TV Show Name">
 
-    <div id="result"></div>
+            <button onclick="searchMovie()">
+                Search
+            </button>
 
-</div>
+        </div>
 
-<script src="script.js"></script>
+        <div id="result">
+
+            <div class="card">
+
+                <h2>Search for a Movie</h2>
+
+                <p>
+                    Enter a movie or TV show name above and
+                    click Search.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
