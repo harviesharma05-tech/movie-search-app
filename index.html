@@ -3,22 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie Search App</title>
+    <title>Movie Explorer</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <header>
+
+        <h1>🎬 Movie Explorer</h1>
+
+        <button id="themeBtn">
+            🌙 Toggle Theme
+        </button>
+
+    </header>
+
     <div class="container">
 
-        <h1>🎬 Movie Search App</h1>
-
-        <div class="search-box">
+        <div class="search-section">
 
             <input
                 type="text"
                 id="searchInput"
-                placeholder="Enter Movie or TV Show Name">
+                placeholder="Search Movies or TV Shows">
 
             <button onclick="searchMovie()">
                 Search
@@ -26,22 +34,45 @@
 
         </div>
 
-        <div id="result">
+        <div id="loader" class="loader hidden"></div>
 
-            <div class="card">
+        <section class="history-section">
 
-                <h2>Search for a Movie</h2>
+            <h2>Recent Searches</h2>
 
-                <p>
-                    Enter a movie or TV show name above and
-                    click Search.
-                </p>
+            <ul id="historyList"></ul>
+
+        </section>
+
+        <section>
+
+            <h2>Search Results</h2>
+
+            <div id="result" class="movie-grid">
 
             </div>
 
-        </div>
+        </section>
+
+        <section>
+
+            <h2>❤️ Favorite Movies</h2>
+
+            <div id="favorites" class="movie-grid">
+
+            </div>
+
+        </section>
 
     </div>
+
+    <footer>
+
+        <p>
+            Built with HTML, CSS, JavaScript & TVMaze API
+        </p>
+
+    </footer>
 
     <script src="script.js"></script>
 
