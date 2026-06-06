@@ -1,34 +1,63 @@
-body{
-    background:#121212;
-    color:white;
-    font-family:Arial,sans-serif;
-    text-align:center;
-}
+async function searchMovie(){
 
-.container{
-    width:80%;
-    margin:auto;
-    padding-top:30px;
-}
+    const movie =
+    document.getElementById("searchInput").value;
 
-input{
-    padding:10px;
-    width:250px;
-}
+    const result =
+    document.getElementById("result");
 
-button{
-    padding:10px;
-    cursor:pointer;
-}
+    if(movie===""){
+        alert("Enter a movie name");
+        return;
+    }
 
-.card{
-    background:#1e1e1e;
-    padding:20px;
-    margin-top:20px;
-    border-radius:10px;
-}
+    const response =
+    await fetch(
+    `https://api.tvmaze.com/search/shows?q=${movie}`
+    );
 
-img{
-    width:250px;
-    border-radius:10px;
+    const data =
+    await response.json();
+
+    if(data.length===0){
+
+        result.innerHTML=
+        "<h2>No Results Found</h2>";
+
+        return;
+    }
+
+    const show = data[0].show;
+
+    result.innerHTML=`
+
+    <div class="card">
+
+        <img src="${show.image ?
+        show.image.medium :
+        ''}">
+
+        <h2>${show.name}</h2>
+
+        <p>
+        <b>Language:</b>
+        ${show.language}
+        </p>
+
+        <p>
+        <b>Rating:</b>
+        ${show.rating.average || "N/A"}
+        </p>
+
+        <p>
+        <b>Genres:</b>
+        ${show.genres.join(", ")}
+        </p>
+
+        <p>
+        ${show.summary || ""}
+        </p>
+
+    </div>
+    `;
 }
