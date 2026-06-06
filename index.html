@@ -1,10 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Movie Search App</title>
-<link rel="stylesheet" href="style.css">
+    <title>Movie Search App</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -12,21 +10,20 @@
 
     <h1>🎬 Movie Search App</h1>
 
-    <div class="search-box">
-        <input
+    <input
         type="text"
-        id="movieInput"
-        placeholder="Enter Movie Name">
+        id="searchInput"
+        placeholder="Enter movie/show name">
 
-        <button onclick="searchMovie()">
-            Search
-        </button>
-    </div>
+    <button onclick="searchMovie()">
+        Search
+    </button>
 
-    <div id="movieResult"></div>
+    <div id="result"></div>
 
 </div>
 
 <script src="script.js"></script>
+
 </body>
 </html>
